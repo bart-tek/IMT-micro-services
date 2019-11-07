@@ -17,7 +17,7 @@ public class FournisseurTraduction implements ContextResolver<JAXBContext> {
     }
     
     public JAXBContext getContext(Class<?> type) {
-    	System.out.println("RÃ©cupÃ©ration du contexte JAXB pour : " + type);
+    	System.out.println("Récupération du contexte JAXB pour : " + type);
 
         if (context == null) {
             try {

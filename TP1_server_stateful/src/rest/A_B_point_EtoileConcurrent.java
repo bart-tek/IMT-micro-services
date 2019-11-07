@@ -14,7 +14,7 @@ public class A_B_point_EtoileConcurrent implements Automate {
 	private ConcurrentMap<Session, Etat> executions;
 
 	public A_B_point_EtoileConcurrent() {
-		System.out.println("DÃ©ploiement de " + this.getClass());
+		System.out.println("Déploiement de " + this.getClass());
 		numeroSession = 0;
 		executions = new ConcurrentHashMap<Session, Etat>(25);
 	}

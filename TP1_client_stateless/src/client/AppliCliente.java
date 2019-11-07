@@ -2,7 +2,7 @@ package client;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
+//import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
 import org.glassfish.jersey.client.ClientConfig;
@@ -31,7 +31,7 @@ public class AppliCliente {
 
 		System.out.println("*************");
 
-		WebTarget target = clientJAXRS().target(adresse);
+//		WebTarget target = clientJAXRS().target(adresse);
 
 //		Automate automate = WebResourceFactory.newResource(Automate.class, target);
 		Automate automate = new AutomateProxy(adresse, MediaType.APPLICATION_JSON_TYPE);

@@ -14,7 +14,7 @@ public class A_B_point_Etoile implements Automate {
 	private Map<Session, Etat> executions;
 
 	public A_B_point_Etoile() {
-		System.out.println("DÃ©ploiement de " + this.getClass());
+		System.out.println("Déploiement de " + this.getClass());
 		numeroSession = 0;
 		executions = new HashMap<Session, Etat>(25);
 	}

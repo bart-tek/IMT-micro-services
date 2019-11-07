@@ -15,7 +15,7 @@ public class ImplemSession implements Session {
 		numero = Integer.parseInt(x);
 	}
 	/**
-     * Obtient la valeur de la propriÃ©tÃ© numero.
+     * Obtient la valeur de la propriété numero.
      * 
      */
 	public int getNumero() {
@@ -23,7 +23,7 @@ public class ImplemSession implements Session {
 	}
 
 	/**
-     * DÃ©finit la valeur de la propriÃ©tÃ© numero.
+     * Définit la valeur de la propriété numero.
      * 
      */
 	public void setNumero(int numero) {

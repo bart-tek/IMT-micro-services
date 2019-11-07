@@ -21,7 +21,7 @@ public class TestConcurrence {
 		final long incrementations = Stream.generate(() -> 0).limit(REQUETES).parallel()
 				.map(j -> automateProxyJersey.initier().getNumero()).distinct().count();
 
-		System.out.println("Pertes en �criture : " + (REQUETES - incrementations) + "/ " + REQUETES + " requ�tes.");
+		System.out.println("Pertes en écriture : " + (REQUETES - incrementations) + "/ " + REQUETES + " requ�tes.");
 		System.out.println("*************");
 	}
 

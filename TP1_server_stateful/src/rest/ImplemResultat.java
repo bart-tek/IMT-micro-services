@@ -9,7 +9,7 @@ public class ImplemResultat implements Resultat {
 	private boolean valide;
 
 	/**
-     * Obtient la valeur de la propriÃ©tÃ© valide.
+     * Obtient la valeur de la propriété valide.
      * 
      */
 	public boolean isValide() {
@@ -17,7 +17,7 @@ public class ImplemResultat implements Resultat {
 	}
 
 	/**
-     * DÃ©finit la valeur de la propriÃ©tÃ© valide.
+     * Définit la valeur de la propriété valide.
      * 
      */
 	public void setValide(boolean estValide) {
@@ -25,7 +25,7 @@ public class ImplemResultat implements Resultat {
 	}
 
 	/**
-     * Obtient la valeur de la propriÃ©tÃ© id.
+     * Obtient la valeur de la propriété id.
      * 
      * @return
      *     possible object is
@@ -37,7 +37,7 @@ public class ImplemResultat implements Resultat {
 	}
 
 	/**
-     * DÃ©finit la valeur de la propriÃ©tÃ© id.
+     * Définit la valeur de la propriété id.
      * 
      * @param id
      *     allowed object is
