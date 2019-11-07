@@ -9,6 +9,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import javax.inject.Singleton;
 import javax.ws.rs.Path;
@@ -23,6 +25,7 @@ public class ImplemBibliotheque implements BibliothequeArchive {
 
 	private ConcurrentMap<IdentifiantLivre, Livre> catalogue;
 	private int compteur; // dernier identifiant utilisé (-1 : non utilisé)
+	private Lock lock = new ReentrantLock();
 
 	public ImplemBibliotheque() {
 		System.out.println("Déploiement de " + this + " : " + this.getClass());
@@ -32,11 +35,19 @@ public class ImplemBibliotheque implements BibliothequeArchive {
 
 	@Override
 	public HyperLien<Livre> ajouter(Livre l) {
-		IdentifiantLivre id = null;
-		compteur++;
-		id = new ImplemIdentifiantLivre(Integer.toString(compteur));
-		catalogue.put(id, l);
-		final URI adresse = URI.create("bibliotheque/" + id.getId());
+
+		final URI adresse;
+
+		lock.lock();
+		try {
+			IdentifiantLivre id = null;
+			compteur++;
+			id = new ImplemIdentifiantLivre(Integer.toString(compteur));
+			catalogue.put(id, l);
+			adresse = URI.create("bibliotheque/" + id.getId());
+		} finally {
+			lock.unlock();
+		}
 		return new HyperLien<Livre>(Response.created(adresse).build().getLocation());
 	}
 

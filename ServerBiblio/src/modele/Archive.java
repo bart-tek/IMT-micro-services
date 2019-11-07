@@ -17,7 +17,9 @@ import infrastructure.jaxrs.annotations.ReponsesPOSTCreated;
 @Path(CHEMIN_BIBLIO)
 public interface Archive {
 
-	Livre sousRessource(IdentifiantLivre id);
+	@Path("{id}")
+	@Produces(TYPE_MEDIA)
+	Livre sousRessource(@PathParam("id") IdentifiantLivre id);
 
 	@GET
 	@Path("{id}")
