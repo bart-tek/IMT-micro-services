@@ -16,7 +16,7 @@ public class JAXRS {
 
 	// Adresse
 	public static final String SERVEUR = "http://localhost:8080";
-	public static final String CHEMIN = "/ServerBiblio/bibliotheque";
+	public static final String CHEMIN = "/BibliothequeServeur/bibliotheque";
 
 	// Chemins et requêtes
 	public static final String CHEMIN_BIBLIO = "bibliotheque";

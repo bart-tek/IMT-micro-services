@@ -43,7 +43,7 @@ public class AppliCliente {
 		System.out.println("POST 1 - uri : " + r1.getUri());
 		System.out.println("POST 2 - uri : " + r2.getUri());
 
-		System.out.println("*** 2. RÃ©cupÃ©rer un livre Ã  partir de l'hyperlien ***");
+		System.out.println("*** 2. Récupérer un livre Ã  partir de l'hyperlien ***");
 
 		Livre l3 = ClientRessource.proxy(r2, Livre.class);
 		System.out.println("Proxy (true) ? " + Proxy.isProxyClass(l3.getClass()));
@@ -69,7 +69,7 @@ public class AppliCliente {
 		System.out.println("GET 7 - livre absent : " + biblio.chercher(new ImplemLivre("absent")));
 		
 
-		System.out.println("*** 4. RÃ©pertorier les livres ***");
+		System.out.println("*** 4. Répertorier les livres ***");
 
 		System.out.println("GET 8 - catalogue : " + biblio.repertorier());
 

@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBException;
 import infrastructure.jaxrs.HyperLien;
 import infrastructure.jaxrs.HyperLiens;
 import modele.ImplemLivre;
+import modele.ImplemNomAlgorithme;
 
 @Provider
 public class FournisseurTraduction implements ContextResolver<JAXBContext> {
@@ -22,13 +23,15 @@ public class FournisseurTraduction implements ContextResolver<JAXBContext> {
 
         if (context == null) {
             try {
-                context = JAXBContext.newInstance(ImplemLivre.class, HyperLien.class, HyperLiens.class);
+                context = JAXBContext.newInstance(ImplemLivre.class, 
+                		HyperLien.class, HyperLiens.class, 
+                		ImplemNomAlgorithme.class);
             } catch (JAXBException e) {
                 // log warning/error; null will be returned which indicates that this
                 // provider won't/can't be used.
             }
         }
-        // System.out.println("Contexte JAXB: " + context);
+ 
         return context;
     }
 }

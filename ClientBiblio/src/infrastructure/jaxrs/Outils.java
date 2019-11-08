@@ -8,7 +8,7 @@ import javax.ws.rs.core.Response;
 
 public class Outils {
 	/*
-	 * A utiliser avec des réponses correspondant à des erreurs.
+	 * A utiliser avec des r�ponses correspondant à des erreurs.
 	 */
 	public static String messageErreur(Response rep){
 		String msg = rep.getStatus() + " : ";
