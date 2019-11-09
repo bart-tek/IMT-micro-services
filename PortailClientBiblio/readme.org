@@ -1,0 +1,37 @@
+Barthélémy TEK
+Robin CARREZ
+
+Machine utilisée : Acer Swift 5, i7-8550U 1.80GHz 4 core, 8go de RAM
+
+Une recherche par algo
+
+Nom de l'algo : recherche sync seq
+Temps de recherche en synchrone : 7594
+
+Nom de l'algo : recherche sync multi
+Temps de recherche en synchrone : 109
+
+Nom de l'algo : recherche sync stream 8
+Temps de recherche en synchrone : 1669
+
+Nom de l'algo : recherche sync stream rx
+Temps de recherche en synchrone : 8062
+
+Nom de l'algo : recherche async seq
+Temps de recherche en synchrone : 1560
+
+Nom de l'algo : recherche async multi
+Temps de recherche en synchrone : 109
+
+Nom de l'algo : recherche async stream 8
+Temps de recherche en synchrone : 1728
+
+Nom de l'algo : recherche async stream rx
+Temps de recherche en synchrone : 7571
+
+Commentaire : Nous n'avons pas réussi à tester avec la méthode chercherAsynchrone(Livre l, AsyncResponse ar) car nous ne savions pas comment initialiser le paramètre AsyncResponse
+
+Conclusion : 
+
+    Pour l'algo "recherche seq", la méthode asynchrone est beaucoup plus efficace que la méthode synchrone. Pour les autres algo, la différence n'est pas significative.
+    L'algorithme le plus efficace est clairement la recherche multi, pour lequel il n'y pas de différence entre les modes synchrone et asynchrone.
